@@ -224,25 +224,14 @@ def _read_slopes(directory, filepattern="PT_*"):
 
 
 def testBigSUV():
-    ptp = r'D:\dataset\淋巴瘤3\迟学梅1\PT'
-    ctp = r'D:\dataset\淋巴瘤3\迟学梅1\CT'
+    ptp = r'D:\dataset\淋巴瘤3\xxx\PT'
+    ctp = r'D:\dataset\淋巴瘤3\xxx\CT'
     return getRegistedSUV(ctp, ptp)
 
 
 if __name__ == '__main__':
-    # from skimage import io as sio
-    # import pickle
-    # import os
-    #
-    # result = testBigSUV()
-    # imgNum = result.shape[2]
-    # for i in range(imgNum):
-    #     sio.imsave(os.path.join(r'D:\dataset\restedPT',str(i)+'.jpg'),np.clip(result[:,:,i],0,255))
 
-    # with open(r'F:\dataset\淋巴瘤原始更多\淋巴瘤图像\t.pkl', 'wb') as f:
-    #     pickle.dump(result, f)
-
-    ip=r'D:\dataset\CoreData\maskdPETCT\49_腹水原因待查，肝硬化\PET'
+    ip=r'D:\dataset\CoreData\maskdPETCT\xxx\PET'
     op=r'E:\pyWorkspace\untitled\processHospitalData\data\6\suv'
     suvs=getSUVs(ip)
     from PIL import Image
